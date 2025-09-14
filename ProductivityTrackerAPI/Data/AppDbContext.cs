@@ -7,6 +7,8 @@ public class AppDbContext : DbContext
 {
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
-    public DbSet<TaskItem> Tasks { get; set; }
-    // Cuando otro integrante cree su entidad, se agrega aquí su DbSet
+    public DbSet<TaskItem> Tasks { get; set; } = null!;
+    public DbSet<TimeBlock> TimeBlocks { get; set; } = null!;
+    public DbSet<Goal> Goals { get; set; } = null!;
+    public DbSet<Distraction> Distractions { get; set; } = null!;
 }

@@ -61,7 +61,7 @@ packages/
 # ARCHIVOS DE MIGRACIÓN (OPCIONAL)
 ##############################
 # Si NO querés versionar tus migraciones, descomentá la siguiente línea
-# Migrations/
+Migrations/
 
 ##########################
 # ARCHIVOS DEL SISTEMA
