@@ -1,57 +1,70 @@
-#####################################
-# .gitignore para proyectos .NET Core
-#####################################
 
-# Archivos y carpetas generadas por el build
 bin/
 obj/
 out/
+publish/
 
-# Archivos de configuración del usuario
+#####################
+# CONFIGURACIONES IDE
+#####################
+
+# JetBrains Rider / IntelliJ
+.idea/
+*.sln.iml
+
+# Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Visual Studio
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# Archivos de dependencias NuGet (locales)
+#####################
+# ARCHIVOS TEMPORALES
+#####################
+*.tmp
+*.bak
+*.swp
+*.pid
+
+##########
+# LOG FILES
+##########
+*.log
+
+###############################
+# CONFIGURACIONES Y SECRETOS
+###############################
+
+# Secretos de entorno local
+secrets.json
+
+# Configuración de entorno (dev, test, etc.)
+.env
+.env.*
+
+# AppSettings específicos del entorno
+appsettings.Development.json
+
+#################################
+# PAQUETES Y DEPENDENCIAS NUGET
+#################################
 *.nupkg
 *.snupkg
 packages/
 .nuget/
 
-# Configuración de JetBrains Rider
-.idea/
-
-# Configuración de Visual Studio Code
-.vscode/
-*.code-workspace
-
-# Archivos de sistema
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Archivos de publicación
-publish/
-*.publish.xml
-
-# Archivos temporales
-*.tmp
-*.bak
-*.swp
-
-# Secretos (usar dotnet user-secrets mejor)
-secrets.json
-
-# Configuración del entorno local
-.env
-.env.*
-
-# Archivos de migraciones de EF Core (opcional)
-# Descomenta la siguiente línea si NO querés subir las migraciones
+##############################
+# ARCHIVOS DE MIGRACIÓN (OPCIONAL)
+##############################
+# Si NO querés versionar tus migraciones, descomentá la siguiente línea
 # Migrations/
 
-# AppSettings específicos del entorno (desarrollo)
-appsettings.Development.json
+##########################
+# ARCHIVOS DEL SISTEMA
+##########################
+.DS_Store
+Thumbs.db
