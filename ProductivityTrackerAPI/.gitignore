@@ -1,0 +1,57 @@
+#####################################
+# .gitignore para proyectos .NET Core
+#####################################
+
+# Archivos y carpetas generadas por el build
+bin/
+obj/
+out/
+
+# Archivos de configuración del usuario
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Archivos de dependencias NuGet (locales)
+*.nupkg
+*.snupkg
+packages/
+.nuget/
+
+# Configuración de JetBrains Rider
+.idea/
+
+# Configuración de Visual Studio Code
+.vscode/
+*.code-workspace
+
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Archivos de publicación
+publish/
+*.publish.xml
+
+# Archivos temporales
+*.tmp
+*.bak
+*.swp
+
+# Secretos (usar dotnet user-secrets mejor)
+secrets.json
+
+# Configuración del entorno local
+.env
+.env.*
+
+# Archivos de migraciones de EF Core (opcional)
+# Descomenta la siguiente línea si NO querés subir las migraciones
+# Migrations/
+
+# AppSettings específicos del entorno (desarrollo)
+appsettings.Development.json
