@@ -1,5 +1,59 @@
+#############
+# JetBrains Rider
+#############
+.idea/
+*.sln.iml
+
+#############
+# Build results
+#############
 bin/
 obj/
-/packages/
-riderModule.iml
-/_ReSharper.Caches/
+out/
+[Bb]uild/
+[Ll]ogs/
+*.log
+
+#############
+# User-specific files
+#############
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+#############
+# Visual Studio Code settings
+#############
+.vscode/
+
+#############
+# Rider-specific files
+#############
+*.DotSettings.user
+
+#############
+# ASP.NET Core Secrets
+#############
+secrets.json
+appsettings.Development.json
+
+#############
+# Others
+#############
+*.dbmdl
+*.pdb
+*.cache
+*.tmp
+*.ncrunch*
+_ReSharper*/
+*.resharper
+*.orig
+
+#############
+# OS generated files
+#############
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
