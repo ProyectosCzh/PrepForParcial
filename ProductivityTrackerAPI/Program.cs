@@ -1,15 +1,18 @@
+using Microsoft.EntityFrameworkCore;
+using ProductivityTrackerAPI.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Agregar servicios al contenedor
-builder.Services.AddControllers();
+// Cadena de conexión desde appsettings.json
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
-// Agregar servicios de Swagger
+builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
-// Configurar la canalización de solicitudes HTTP
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
@@ -17,6 +20,5 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-app.UseAuthorization();
 app.MapControllers();
 app.Run();
